@@ -23,10 +23,10 @@
   <meta name="twitter:description" content="Description Here">
   <meta name="twitter:image" content="https://www.developmentlogics.com/wp-content/uploads/2017/07/4.jpg">
   <!-- Favivon -->
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" href="https://example.com/favicon.png">
+  <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
+  <link rel="icon" type="image/png" href="assets/img/logo.svg">
   <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" href="/custom-icon.png">
+  <link rel="apple-touch-icon" href="assets/img/logo.svg">
   <!-- Styles CSS -->
   <link rel="stylesheet" href="assets/css/libs.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -37,6 +37,46 @@
 <body>
   <!-- Header -->
   <header class="header">
+    <div class="container">
+      <div class="header__block">
+        <div class="header__top">
+          <div class="header__location">
+            <img class="header__location_icon" src="assets/img/icons/location.svg" alt="icon">
+            <span class="header__location_text">Москва</span>
+          </div>
+          <ul class="header__menu">
+            <li class="header__menu_item"><a class="header__menu_link" href="#">О компании</a></li>
+            <li class="header__menu_item"><a class="header__menu_link" href="#">Оплата</a></li>
+            <li class="header__menu_item"><a class="header__menu_link" href="#">Доставка</a></li>
+            <li class="header__menu_item"><a class="header__menu_link" href="#">Гарантия</a></li>
+            <li class="header__menu_item"><a class="header__menu_link" href="#">Сертификаты</a></li>
+            <li class="header__menu_item"><a class="header__menu_link" href="#">Отзывы</a></li>
+            <li class="header__menu_item"><a class="header__menu_link" href="#">Статьи</a></li>
+            <li class="header__menu_item"><a class="header__menu_link" href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="header__center">
+          <a class="header__logo" href="#">
+            <img src="assets/img/logo.svg" alt="logo">
+          </a>
+        </div>
+        <div class="header__bottom">
+          <button class="header__catalog js-open-catalog">
+            <div class="hamburger hamburger--elastic js-hamburger is-active">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+            <span class="header__catalog_text">Каталог продукции</span>
+          </button>
+          <form action="#" class="header__search">
+            <input class="input" type="text" placeholder="Декоративный камень на септик" name="">
+            <button class="btn-search"><img src="assets/img/icons/Search.svg" alt=""></button>
+          </form>
+          <div class="header__control"></div>
+        </div>
+      </div>
+    </div>
   </header>
   <!-- Main -->
   <main class="main">
