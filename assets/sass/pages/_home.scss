@@ -1,0 +1,12 @@
+.main-banner {
+    margin-top: 40px;
+    &__block {
+        display: flex;
+        align-items: center;
+        column-gap: 50px;
+    }
+
+    &__main {}
+
+    &__second {}
+}

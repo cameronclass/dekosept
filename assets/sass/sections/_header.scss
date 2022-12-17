@@ -1,7 +1,9 @@
 .header {
-    &__block {}
 
-    &__logo {}
+    &__logo {
+        width: 100%;
+        max-width: 190px;
+    }
 
     &__top {
         display: flex;
@@ -15,6 +17,35 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
+
+        &_left {
+            display: flex;
+            column-gap: 50px;
+        }
+
+        &_right {
+            display: flex;
+            align-items: center;
+            column-gap: 64px;
+
+            &_icon {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+            }
+
+            &_buttons {
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+            }
+        }
+
+        &_btn {
+            display: flex;
+            align-items: center;
+            height: 12px;
+        }
     }
 
     &__bottom {
@@ -22,6 +53,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
+        column-gap: 60px;
     }
 
     &__menu {
@@ -61,24 +93,83 @@
         }
     }
 
+    &__iconed {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        &_icon {
+            width: auto;
+            height: 20px;
+        }
+
+        &_text {
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        &_2 {
+            margin-left: 50px;
+        }
+
+        &_small {
+            font-size: 10px;
+            font-weight: 400;
+            color: $black;
+            text-decoration: none;
+            column-gap: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 400;
+
+            &_icon {
+                width: 13px;
+                height: 13px;
+            }
+
+            &_text {}
+
+            &_link {
+                font-weight: 600;
+            }
+        }
+    }
+
     &__catalog {
         display: flex;
         align-items: center;
         column-gap: 10px;
         background-color: $main;
         color: white;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        min-width: 184px;
     }
 
     &__search {
         display: flex;
         align-items: stretch;
+        width: 100%;
+        max-width: 870px;
     }
 
+    &__control {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
 
+        &_icon {
+            width: auto;
+            height: 20px;
+        }
 
-    &__search {}
+        &_btn {
+            display: flex;
+            align-items: center;
+        }
+    }
 
-    &__search {}
-
-    &__search {}
 }
