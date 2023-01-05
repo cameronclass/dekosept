@@ -3,6 +3,7 @@
     border-radius: 32px;
     overflow: hidden;
     color: white;
+    display: flex;
 
     &__block {
         position: absolute;
@@ -35,5 +36,68 @@
         font-weight: 500;
         font-size: 14px;
         padding: 13px 55px;
+    }
+
+    /* Small */
+
+    &-small {
+        position: relative;
+        border-radius: 32px;
+        overflow: hidden;
+        color: $black;
+        background-color: $light;
+        display: flex;
+
+        &__block {
+            padding: 24px 24px 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 130px;
+            object-fit: contain;
+            object-position: right;
+
+            &_icon {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &__title {
+            font-weight: 800;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        &__subtitle {
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        &__price {
+            font-weight: 300;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        &__btn {
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 13px;
+        }
     }
 }
