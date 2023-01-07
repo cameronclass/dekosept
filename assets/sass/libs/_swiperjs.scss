@@ -351,12 +351,12 @@
 }
 
 .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
-    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+    width: 8px;
+    height: 8px;
     display: inline-block;
-    border-radius: 50%;
-    background: var(--swiper-pagination-bullet-inactive-color, #000);
-    opacity: var(--swiper-pagination-bullet-inactive-opacity, .2)
+    border-radius: 2px;
+    background: black;
+    opacity: 0.3;
 }
 
 button.swiper-pagination-bullet {
@@ -377,8 +377,9 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-bullet-active {
-    opacity: var(--swiper-pagination-bullet-opacity, 1);
-    background: var(--swiper-pagination-color, var(--swiper-theme-color))
+    opacity: 1;
+    transform: scale(1.1);
+    background: black;
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets,
