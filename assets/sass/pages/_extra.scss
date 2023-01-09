@@ -335,6 +335,7 @@
       font-weight: 300;
       font-size: 12px;
       line-height: 1.4;
+      transition: none;
 
       &._tab-active {
         font-weight: 700;
@@ -519,6 +520,7 @@
       font-size: 16px;
       line-height: 1.2;
       color: #858585;
+      transition: none;
 
       &._tab-active {
         font-weight: 500;
