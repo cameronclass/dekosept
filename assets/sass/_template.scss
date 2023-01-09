@@ -24,6 +24,8 @@ a,
 button {
     transition: 200ms ease;
     line-height: 1.2;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -38,6 +40,8 @@ p {
     font-weight: 300;
     font-size: 14px;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -134,6 +138,11 @@ input[type="checkbox"]:disabled {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    @include mobile {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
 
 .wrapper {
@@ -150,4 +159,17 @@ input[type="checkbox"]:disabled {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul, li {
+	list-style: none;
+    padding: 0;
+     margin: 0;
 }

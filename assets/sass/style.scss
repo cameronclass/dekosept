@@ -1,4 +1,5 @@
 /* Helpers */
+@import "helpers/mixin-d";
 @import "variables";
 @import "helpers/mixins";
 @import "helpers/media-query";
@@ -16,8 +17,9 @@
 @import "sections/header";
 @import "sections/footer";
 
-/* Pages */
+/* Pages  */
 @import "pages/home";
+@import "pages/extra";
 
 /* Sliders */
 @import "common/sliders";
