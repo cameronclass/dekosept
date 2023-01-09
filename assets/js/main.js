@@ -48,6 +48,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+  if (document.querySelector(".partners__slider .swiper")) {
+    new Swiper(".partners__slider .swiper", {
+      slidesPerView: 6,
+      spaceBetween: 35,
+      loop: true,
+      navigation: {
+        nextEl: ".partners__slider .swiper-button-next",
+        prevEl: ".partners__slider .swiper-button-prev",
+      },
+    });
+  }
+
   if (document.querySelector(".main-card-slider")) {
     new Swiper(".main-card-slider", {
       slidesPerView: 1,
@@ -68,4 +80,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 
   new Accordion(".accordion-container");
+
+  Fancybox.bind("[data-fancybox]", {});
 });

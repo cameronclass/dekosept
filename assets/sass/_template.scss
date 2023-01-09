@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.2;
+    background-color: $light;
 }
 
 button {
@@ -23,6 +24,20 @@ a,
 button {
     transition: 200ms ease;
     line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: $main;
+    }
+}
+
+p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 img {
@@ -111,8 +126,20 @@ input[type="checkbox"]:disabled {
 .container {
     width: 100%;
     max-width: 1400px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+
+    @include tablet {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    background-color: #fff;
     margin: 0 auto;
 }
 

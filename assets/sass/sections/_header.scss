@@ -21,12 +21,20 @@
         &_left {
             display: flex;
             column-gap: 50px;
+
+            @include laptop {
+                column-gap: 30px;
+            }
         }
 
         &_right {
             display: flex;
             align-items: center;
             column-gap: 64px;
+
+            @include laptop {
+                column-gap: 30px;
+            }
 
             &_icon {
                 display: flex;
@@ -110,6 +118,10 @@
 
         &_2 {
             margin-left: 50px;
+
+            @include laptop {
+                margin-left: 0;
+            }
         }
 
         &_small {
@@ -147,6 +159,10 @@
         font-size: 12px;
         font-weight: 600;
         min-width: 184px;
+
+        &:hover {
+            background-color: $cyan;
+        }
     }
 
     &__search {
