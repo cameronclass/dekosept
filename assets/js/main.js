@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-/* Tabs */
+  /* Tabs */
 function tabs() {
   const tabs = document.querySelectorAll("[data-tabs]");
   let tabsActiveHash = [];
@@ -87,7 +87,7 @@ function tabs() {
     }
     const tabsBlockAnimate = isTabsAnamate(tabsBlock);
     if (tabsContent.length > 0) {
-      const isHash = tabsBlock.hasAttribute("data-tabs-hash");
+      // const isHash = tabsBlock.hasAttribute("data-tabs-hash");
       tabsContent = Array.from(tabsContent).filter(
         (item) => item.closest("[data-tabs]") === tabsBlock
       );
@@ -101,9 +101,9 @@ function tabs() {
           } else {
             tabsContentItem.hidden = false;
           }
-          if (isHash && !tabsContentItem.closest(".popup")) {
-            setHash(`tab-${tabsBlockIndex}-${index}`);
-          }
+          // if (isHash && !tabsContentItem.closest(".popup")) {
+          //   setHash(`tab-${tabsBlockIndex}-${index}`);
+          // }
         } else {
           if (tabsBlockAnimate) {
             _slideUp(tabsContentItem, tabsBlockAnimate);

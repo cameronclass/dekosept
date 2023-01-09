@@ -1,0 +1,14 @@
+{
+  "liveServer.settings.port": 5503,
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "/assets/css"
+    }
+  ],
+  // "liveSassCompile.settings.showOutputWindowOn": "Information",
+  // "liveSassCompile.settings.watchOnLaunch": true,
+  // "liveSassCompile.settings.compileOnWatch": true,
+}

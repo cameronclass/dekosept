@@ -111,9 +111,6 @@
 // ===============================================================
 // ----------- ORDERING -----
 .ordering {
-  h4 {
-    margin: 0;
-  }
   @include adaptiveValue("margin-bottom", 93, 37);
   // .ordering__title
   &__title {
@@ -321,6 +318,13 @@
       display: flex;
       padding-bottom: 16px;
       border-bottom: 1px solid  #EDEDED;
+      height: 42px;
+      @media (max-width: 1320px) {
+        height: 68px;
+      }
+      @media (max-width: 992px) {
+        height: 40px;
+      }
     }
     // .ordering__about_title
     &_title {
@@ -385,9 +389,14 @@
       padding-top: 19px;
       padding-bottom: 19px;
       width: 100%;
+      text-align: center;
 
       &:nth-child(1) {
         font-weight: 300;
+        @media (max-width: 1320px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
       &:nth-child(2) {
         font-weight: 500;
@@ -494,8 +503,10 @@
       margin-bottom: 37px;
       display: flex;
       column-gap: 48px;
+      height: 22px;
       @include tablet {
         @include adaptiveValue("margin-bottom", 37, 25);
+        @include adaptiveValue("height", 22, 17);
       }
       @include mobile {
         justify-content: center;
@@ -593,7 +604,7 @@
     &_label {
       display: flex;
       flex-direction: column;
-      border: 1px solid #E9E9E9;
+      border: 2px solid #E9E9E9;
       border-radius: 16px;
       overflow: hidden;
       height: 100%;
@@ -637,6 +648,7 @@
     &_title {
       padding-left: 16px;
       padding-bottom: 4px;
+      margin: 0;
       @include tablet {
         @include adaptiveValue("font-size", 16, 12);
         @include adaptiveValue("padding-bottom", 4, 8);
@@ -676,7 +688,7 @@
     &_label {
       display: flex;
       align-items: center;
-      border: 1px solid #EDEDED;
+      border: 2px solid #EDEDED;
       border-radius: 6px;
       padding: 18px 16px;
       gap: 14px;
@@ -733,6 +745,12 @@
         @include tablet {
           @include adaptiveValue("margin-bottom", 26, 16);
         }
+      }
+    }
+    .ordering__quick_btn {
+      width: 354px;
+      @include tablet {
+        width: 100%;
       }
     }
     // .ordering__checked_check
