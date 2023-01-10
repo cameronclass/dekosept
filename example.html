@@ -44,28 +44,32 @@
           <h2 class="ordering__title main-title">оформление заказа</h2>
           <div class="ordering__body">
 
-            <div class="ordering__product">
-              <div class="ordering__product_one">
-                <div class="ordering__product_img">
-                  <img class="ordering__product_image" src="assets/img/card/2.jpg" alt="image">
-                </div>
-                <div class="ordering__product_name">Декоративный камень на септик ТОПАС 140x130/50</div>
-                <div class="ordering__product_count">
-                  <div class="ordering__product_counting counting">
-                    <div class="counting__minus">-</div>
-                    <div class="counting__count">4</div>
-                    <div class="counting__plus">+</div>
+            <div class="ordering__products">
+              <div class="ordering__product">
+                <div class="ordering__product_one">
+                  <div class="ordering__product_img">
+                    <img class="ordering__product_image" src="assets/img/card/2.jpg" alt="image">
                   </div>
-                  <div class="ordering__product_sum">18 000 ₽ /шт.</div>
+                  <div class="ordering__product_name">Декоративный камень на септик ТОПАС 140x130/50</div>
+                  <div class="ordering__product_count">
+                    <div data-quantity class="quantity">
+                      <button data-quantity-minus type="button" class="quantity__button quantity__button_minus">-</button>
+                      <div class="quantity__input">
+                        <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                      </div>
+                      <button data-quantity-plus type="button" class="quantity__button quantity__button_plus">+</button>
+                    </div>
+                    <div class="ordering__product_sum">18 000 ₽ /шт.</div>
+                  </div>
+                  <div class="ordering__product_price">
+                    <div class="price-old">20 000 ₽</div>
+                    <div class="price-new">18 000 ₽</div>
+                  </div>
                 </div>
-                <div class="ordering__product_price">
-                  <div class="price-old">20 000 ₽</div>
-                  <div class="price-new">18 000 ₽</div>
+                <div class="ordering__product_two">
+                  <img class="ordering__product_icon" src="assets/img/icons/Star-2.svg" alt="image">
+                  <button class="ordering__product_delete">Удалить</button>
                 </div>
-              </div>
-              <div class="ordering__product_two">
-                <img class="ordering__product_icon" src="assets/img/icons/Star-2.svg" alt="image">
-                <button class="ordering__product_delete">Удалить</button>
               </div>
             </div>
 
