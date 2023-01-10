@@ -251,6 +251,47 @@ formQuantity();
       );
   }
 
+  if (document.querySelector(".card__slider")) {
+    new Swiper(".card__slider", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      autoHeight: false,
+      loop: true,
+      navigation: {
+        nextEl: ".card__sliders .swiper-button-next",
+        prevEl: ".card__sliders .swiper-button-prev",
+      },
+     
+      thumbs: {
+        // Свайпер с мениатюрами
+        // и его настройки
+        swiper: {
+          el: '.card__sliders .card__mini-slider',
+          slidesPerView: 6,
+          spaceBetween: 20,
+           breakpoints: {
+            320: {
+              slidesPerView: 3,
+              autoHeight: true,
+            },
+            500: {
+              slidesPerView: 5,
+            },
+            578: {
+              slidesPerView: 6,
+            },
+            993: {
+              slidesPerView: 5,
+            },
+            1200: {
+              slidesPerView: 6,
+            }
+          },
+        }
+      },
+    });
+  }
+
   new Accordion(".accordion-container");
 
   Fancybox.bind("[data-fancybox]", {});
