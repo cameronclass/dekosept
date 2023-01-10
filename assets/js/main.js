@@ -182,7 +182,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   formQuantity();
 
   /* Header Catalog */
-  const headerCatalogBtn = document.querySelector(".js-open-catalog");
+  const headerCatalogBtn = document.querySelectorAll(".js-open-catalog");
   const jsHeaderCatalog = document.querySelector(".js-header-catalog");
   const jsHeaderSearch = document.querySelector(".js-header-search");
   const jsHeaderSearchContent = document.querySelector(
@@ -193,10 +193,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const mainBlock = document.querySelector(".main");
 
   if (headerCatalogBtn) {
-    headerCatalogBtn.addEventListener("click", () => {
-      const hamburger = document.querySelector(".js-hamburger");
-      hamburger.classList.toggle("is-active");
-      jsHeaderCatalog.classList.toggle("_active");
+    headerCatalogBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        const hamburger = document.querySelectorAll(".js-hamburger");
+        hamburger.forEach((item) => {
+          item.classList.toggle("is-active");
+        });
+
+        jsHeaderCatalog.classList.toggle("_active");
+      });
     });
   }
 
@@ -286,7 +291,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
- /*  window.addEventListener("resize", () => {
+  /*  window.addEventListener("resize", () => {
     if (window.innerWidth > 1200) {
       productsSlider.update();
       productsSlider.updateAutoHeight();
