@@ -33,6 +33,15 @@
   line-height: 1.6;
 }
 
+.main-products__cards {
+  &._grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include adaptiveValue("gap", 32, 16);
+  }
+}
+
 .quantity {
   border: 1px solid #EDEDED;
   border-radius: 6px;
@@ -207,13 +216,179 @@
 	}
 }
 
+// ----------------------------------------
+.form-card {
+  position: relative;
+  background-color: $main;
+  border-radius: 16px;
+  padding: 24px 32px 32px;
+  max-width: 404px;
+  min-width: 300px;
+  width: 100%;
+  // .form-card_evaluation
+  &_evaluation {
+    background-color: white;
+    height: 48px;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 19px 14px 16px;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  // .form-card__title
+  &__title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 0 24px;
+  }
+	// .form-card__close
+	&__close {
+    visibility: hidden;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+	}
+	// .form-card__close-img
+	&__close-img {
+    width: 14px;
+    height: 14px;
+	}
+  // .form-card__inputs
+  &__inputs {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  // .form-card___textarea
+  &__textarea {
+      border-radius: 6px;
+      width: 100%;
+      min-height: 140px;
+	    resize:none;
+	    padding: 10px 16px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+  }
+  // .form-card__input
+  &__input {
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  // .form-card__eval-text
+  &__eval-text {
+  }
+  // .form-card__att
+  &__att {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  // .form-card__photo
+  &__photo {
+    flex: 0 0 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  // .form-card__img
+  &__img {
+  }
+  // .form-card__choose
+  &__choose {
+    position: relative;
+    width: 100%;
+    // .form-card__choose_input
+    &_input {
+      position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    opacity: 0;
+	    font-size: 0;
+	    cursor: pointer;
+    }
+    // .form-card__choose_btn
+    &_btn {
+      color: white;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.2;
+      width: 100%;
+
+      text-align: center;
+      display: inline-flex;
+	    min-height: 48px;
+	    border-radius: 6px;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0px 20px;
+      border: 1px dashed white;
+    }
+  }
+  // .form-card__btns
+  &__btns {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  // .form-card__btn
+  &__btn {
+    height: 60px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  // .form-card__check
+  &__check {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    // .form-card__check_input
+    &_input {
+      display: none;
+    }
+    // .form-card__check_label
+    &_label {
+      font-weight: 500;
+      font-size: 8px;
+      line-height: 1.25;
+      color: white;
+    }
+  }
+}
+
 
 // ===============================================================================
 // === SECTIONS =======
 // ===============================================================================
 
 // ===============================================================
-// ----------- ORDERING -----
+// ----------- CART -----
 .ordering {
   @include adaptiveValue("margin-bottom", 93, 37);
   // .ordering__title
@@ -872,7 +1047,7 @@
 
 
 // ===============================================================
-// ----------- PRODUCT CARD -----
+// ----------- PRODUCT-CARD -----
 
 .product-card { 
   // .product-card__body
@@ -1526,168 +1701,5 @@
   border-radius: 6px;
 }
 
-// ----------------------------------------
-.form-card {
-  position: relative;
-  background-color: $main;
-  border-radius: 16px;
-  padding: 24px 32px 32px;
-  max-width: 404px;
-  min-width: 300px;
-  width: 100%;
-  // .form-card_evaluation
-  &_evaluation {
-    background-color: white;
-    height: 48px;
-    border-radius: 6px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 19px 14px 16px;
-    &:not(:last-child) {
-      margin-bottom: 24px;
-    }
-  }
-  // .form-card__title
-  &__title {
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: white;
-    margin: 0 0 24px;
-  }
-	// .form-card__close
-	&__close {
-    visibility: hidden;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 8px;
-	}
-	// .form-card__close-img
-	&__close-img {
-    width: 14px;
-    height: 14px;
-	}
-  // .form-card__inputs
-  &__inputs {
-    &:not(:last-child) {
-      margin-bottom: 24px;
-    }
-  }
-  // .form-card___textarea
-  &__textarea {
-      border-radius: 6px;
-      width: 100%;
-      min-height: 140px;
-	    resize:none;
-	    padding: 10px 16px;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 24px;
-  }
-  // .form-card__input
-  &__input {
-    border-radius: 6px;
-    width: 100%;
-    text-align: center;
-    height: 48px;
-    &:not(:last-child) {
-      margin-bottom: 24px;
-    }
-  }
-  // .form-card__eval-text
-  &__eval-text {
-  }
-  // .form-card__att
-  &__att {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    &:not(:last-child) {
-      margin-bottom: 24px;
-    }
-  }
-  // .form-card__photo
-  &__photo {
-    flex: 0 0 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  // .form-card__img
-  &__img {
-  }
-  // .form-card__choose
-  &__choose {
-    position: relative;
-    width: 100%;
-    // .form-card__choose_input
-    &_input {
-      position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    height: 100%;
-	    opacity: 0;
-	    font-size: 0;
-	    cursor: pointer;
-    }
-    // .form-card__choose_btn
-    &_btn {
-      color: white;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 1.2;
-      width: 100%;
-
-      text-align: center;
-      display: inline-flex;
-	    min-height: 48px;
-	    border-radius: 6px;
-	    justify-content: center;
-	    align-items: center;
-	    padding: 0px 20px;
-      border: 1px dashed white;
-    }
-  }
-  // .form-card__btns
-  &__btns {
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
-  }
-  // .form-card__btn
-  &__btn {
-    height: 60px;
-    width: 100%;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  // .form-card__check
-  &__check {
-    display: flex;
-    gap: 11px;
-    align-items: center;
-    // .form-card__check_input
-    &_input {
-      display: none;
-    }
-    // .form-card__check_label
-    &_label {
-      font-weight: 500;
-      font-size: 8px;
-      line-height: 1.25;
-      color: white;
-    }
-  }
-}
+// ===============================================================
+// ----------- FAVORITES -----
