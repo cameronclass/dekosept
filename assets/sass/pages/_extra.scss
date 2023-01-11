@@ -1046,6 +1046,7 @@
 }
 
 
+
 // ===============================================================
 // ----------- PRODUCT-CARD -----
 
@@ -1058,7 +1059,6 @@
   }
 }
 
-// ----------------------------------------
 .card {
   display: grid;
   @include adaptiveValue("column-gap", 48, 20);
@@ -1511,8 +1511,6 @@
   }
 }
 
-
-// ----------------------------------------
 .description {
   // .description__navigation
   &__navigation {
@@ -1700,6 +1698,8 @@
   background: #FBFBFB;
   border-radius: 6px;
 }
+
+
 
 // ===============================================================
 // ----------- FAVORITES -----
@@ -2008,3 +2008,170 @@
   }
 }
 
+
+
+// ===============================================================
+// ----------- FEEDBACK -----
+.feedback {
+  // .feedback__main-title
+  &__main-title {
+    @include adaptiveValue("margin-bottom", 60, 24);
+  }
+  // .feedback__title
+  &__title {
+    padding-right: 48px;
+    @media (min-width: 992px) {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+    @include mobile {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+  // .feedback__wrapper
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+  // .feedback__tab
+  &__tab {
+    @media (min-width: 992px) {
+      width: 65%;
+    }
+    @include netbook {
+      width: 100%;
+    }
+  }
+  // .feedback__navigation
+  &__navigation {
+    @include adaptiveValue("margin-bottom", 60, 24);
+  }
+  // .feedback__content
+  &__content {
+  }
+  // .feedback__body
+  &__body {
+  }
+  // .feedback__btn
+  &__btn {
+    height: 48px;
+    margin-bottom: 24px;
+    @media (min-width: 576px) {
+      display: none;
+    }
+  }
+
+
+  // .feedback__tab-one --------------
+  &__tab-one {
+    .description__testim_all {
+      width: 100%;
+    }
+    @include netbook {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // .feedback__numbers
+  &__numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 306px;
+    width: 100%;
+    @include adaptiveValue("margin-top", 48, 32);
+    margin-bottom: 53px;
+    @include netbook {
+      align-self: center;
+    }
+    // .feedback__numbers_left
+    &_left {
+    }
+    // .feedback__numbers_btn-l
+    &_btn-l {
+    }
+    // .feedback__numbers_btn-r
+    &_btn-r {
+      transform: rotate(180deg);
+    }
+    // .feedback__numbers_li
+    &_li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 225px;
+      width: 100%;
+    }
+    // .feedback__numbers_item
+    &_item {
+    }
+    // .feedback__numbers_link
+    &_link {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #878787;
+      &._active {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #000000;
+      }
+    }
+    // .feedback__numbers_right
+    &_right {
+    }
+  }
+
+
+  // .feedback__tab-two --------------------
+  &__tab-two {
+  }
+  // .feedback__reviews
+  &__reviews {
+    // .feedback__reviews_items
+    &_items {
+    }
+    // .feedback__reviews_item
+    &_item {
+    }
+    // .feedback__reviews_img
+    &_img {
+      width: 60px;
+      height: 60px;
+    }
+    // .feedback__reviews_name
+    &_name {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.2;
+      @include tablet {
+        @include adaptiveValue("font-size", 18, 14);
+      }
+    }
+    // .feedback__reviews_btn
+    &_btn {
+    }
+  }
+
+
+  // .feedback__tab-three -------------------
+  &__tab-three {
+    @media (min-width: 992px) {
+      display: none;
+    }
+    .form-card {
+      margin: 0 auto;
+    }
+  }
+  // .feedback__form
+  &__form {
+    @include netbook {
+      display: none;
+    }
+  }
+}
