@@ -388,7 +388,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       );
   }
 
-  new Accordion(".accordion-container");
+  if (document.querySelector(".accordion-container")) {
+    new Accordion(".accordion-container");
+  }
 
   Fancybox.bind("[data-fancybox]", {});
 });
