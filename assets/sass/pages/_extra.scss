@@ -1585,6 +1585,9 @@
   }
   // .description__colm
   &__colm {
+    &:nth-child(1) {
+      padding-left: 12px;
+    }
   }
   // .description__testim -----------------------------
   &__testim {
@@ -2319,4 +2322,20 @@
   }
 }
 
+// ===============================================================
+// ----------- DELIVERY, PAYMENT, GUARANTY... -----
 
+.delivery-page {
+  // .delivery-page__table
+  &__table {
+    @media (max-width: 500px) {
+      overflow-x: auto;
+    }
+    .description__line {
+      grid-template-columns: 33% auto auto auto;
+      @media (max-width: 500px) {
+        width: 500px;
+      }
+    }
+  }
+}
