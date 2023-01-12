@@ -417,6 +417,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (document.querySelector(".accordion-container")) {
     new Accordion(".accordion-container");
   }
+  if (document.querySelector(".accordion-container-second")) {
+    new Accordion(".accordion-container-second");
+  }
 
   Fancybox.bind("[data-fancybox]", {});
 });

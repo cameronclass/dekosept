@@ -2400,3 +2400,81 @@
       }
 		}
 }
+
+
+
+
+// ===============================================================
+// ----------- VACANCY -----
+
+.vacancy {
+  .ac .ac-panel .ac-text {
+    padding: 0;
+    margin-bottom: 16px;
+    @include tablet {
+      @include adaptiveValue("margin-bottom", 16, 20);
+    }
+  }
+  .ac-panel {
+    padding-top: 0;
+    padding-left: 24px;
+    @include adaptiveValue("padding-right", 70, 16);
+    @include tablet {
+      @include adaptiveValue("padding-left", 24, 16);
+    }
+    
+  }
+  // .vacancy__title
+  &__title {
+    margin-bottom: 0;
+  }
+  // .vacancy__body
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include adaptiveValue("column-gap", 48, 0);
+    @include netbook {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .vacancy__clmn
+  &__clmn {
+  }
+  // .vacancy__subtitle
+  &__subtitle {
+    &:not(:first-child) {
+      @include adaptiveValue("margin-top", 30, 32);
+    }
+    @include adaptiveValue("margin-top", 60, 32);
+    @include mobile {
+      text-align: center;
+    }
+  }
+  // .vacancy__salary
+  &__salary {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    @include tablet {
+      @include adaptiveValue("font-size", 16, 14);
+      @include adaptiveValue("margin-bottom", 16, 8);
+    }
+    @include mobile {
+      font-weight: 500;
+      line-height: 1.6;
+    }
+  }
+  // .vacancy__btn
+  &__btn {
+    width: 163px;
+    height: 38px;
+    margin-bottom: 24px;
+    @include tablet {
+      @include adaptiveValue("margin-bottom", 24, 16);
+    }
+    @include mobile {
+     width: 100%;
+    }
+  }
+}
