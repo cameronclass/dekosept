@@ -2019,7 +2019,6 @@
   }
   // .feedback__title
   &__title {
-    padding-right: 48px;
     @media (min-width: 992px) {
       &:nth-child(3) {
         display: none;
@@ -2049,6 +2048,12 @@
   // .feedback__navigation
   &__navigation {
     @include adaptiveValue("margin-bottom", 60, 24);
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 48px;
+    @include netbook {
+      justify-content: center;
+    }
   }
   // .feedback__content
   &__content {
@@ -2088,8 +2093,12 @@
     @include netbook {
       align-self: center;
     }
-    // .feedback__numbers_left
-    &_left {
+    // .feedback__numbers_btn
+    &_btn {
+      filter: invert(60%) sepia(6%) saturate(3%) hue-rotate(3deg) brightness(87%) contrast(90%);
+      &:hover {
+        filter: invert(13%) sepia(83%) saturate(1777%) hue-rotate(227deg) brightness(92%) contrast(101%);
+      }
     }
     // .feedback__numbers_btn-l
     &_btn-l {
@@ -2133,34 +2142,74 @@
   }
   // .feedback__reviews
   &__reviews {
+    // .feedback__reviews_txt
+    &_txt {
+      @include adaptiveValue("margin-bottom", 32, 40);
+      @include tablet {
+        @include adaptiveValue("margin-bottom", 40, 32);
+      }
+    }
     // .feedback__reviews_items
     &_items {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 32px;
+        @include adaptiveValue("column-gap", 48, 16);
+        @include tablet {
+          @include adaptiveValue("row-gap", 32, 24);
+        }
+        @include mobile {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          justify-items: center;
+        }
     }
     // .feedback__reviews_item
     &_item {
+      max-width: 160px;
+      width: 100%;
+      @include mobile {
+        text-align: center;
+      }
     }
     // .feedback__reviews_img
     &_img {
       width: 60px;
       height: 60px;
+      margin-bottom: 16px;
     }
     // .feedback__reviews_name
     &_name {
       font-weight: 500;
       font-size: 18px;
       line-height: 1.2;
+      @include adaptiveValue("margin-bottom", 16, 8);
       @include tablet {
         @include adaptiveValue("font-size", 18, 14);
       }
     }
     // .feedback__reviews_btn
     &_btn {
+      height: 48px;
+      width: 100%;
+      @include tablet {
+        @include adaptiveValue("height", 48, 40);
+      }
+      @include mobile {
+        &.main-btn {
+          font-weight: 600;
+          @include adaptiveValue("font-size", 14, 12);
+          line-height: 1.4;
+          padding: 8px 10px;
+        }
+      }
     }
   }
 
 
   // .feedback__tab-three -------------------
   &__tab-three {
+    
     @media (min-width: 992px) {
       display: none;
     }
@@ -2170,6 +2219,7 @@
   }
   // .feedback__form
   &__form {
+    @include adaptiveValue("margin-top", 80, 24);
     @include netbook {
       display: none;
     }
