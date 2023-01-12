@@ -395,6 +395,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+  if (document.querySelector(".news-one__slider")) {
+    new Swiper(".news-one__slider", {
+      slidesPerView: 3,
+      spaceBetween: 48,
+      loop: true,
+      navigation: {
+        nextEl: ".news-one__slider .swiper-button-next",
+        prevEl: ".news-one__slider .swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 16,
+        },
+        576: {
+          slidesPerView: 2.5,
+          spaceBetween: 48,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 48,
+        },
+      },
+    });
+  }
+
   if (document.querySelector(".main-card-slider")) {
     new Swiper(".main-card-slider", {
       slidesPerView: 1,
