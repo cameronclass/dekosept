@@ -421,6 +421,44 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+  if (document.querySelector(".not-found__slider ")) {
+    new Swiper(".not-found__slider ", {
+      slidesPerView: 3.5,
+      spaceBetween: 40,
+      loop: true,
+      navigation: {
+        nextEl: ".not-found__slider  .swiper-button-next",
+        prevEl: ".not-found__slider  .swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 16,
+        },
+        460: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 2.2,
+          spaceBetween: 40,
+        },
+        973: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1070: {
+          slidesPerView: 3.2,
+          spaceBetween: 40,
+        },
+        1340: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
+
   if (document.querySelector(".main-card-slider")) {
     new Swiper(".main-card-slider", {
       slidesPerView: 1,
