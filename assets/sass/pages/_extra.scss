@@ -222,7 +222,7 @@
 	}
 }
 
-// --- FORM-CARDS --------------------
+// --- FORM-CARD --------------------
 .form-card {
   position: relative;
   background-color: $main;
@@ -231,6 +231,14 @@
   max-width: 404px;
   min-width: 300px;
   width: 100%;
+  &._faq-form {
+    .form-card__title {
+      margin: 0 0 16px;
+    }
+    .form-card__inputs {
+      margin: 0;
+    }
+  }
   // .form-card_evaluation
   &_evaluation {
     background-color: white;
@@ -252,6 +260,14 @@
     line-height: 1.2;
     text-transform: uppercase;
     color: white;
+    margin: 0 0 24px;
+  }
+  // .form-card__text
+  &__text { 
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #FFFFFF;
     margin: 0 0 24px;
   }
 	// .form-card__close
@@ -2338,4 +2354,49 @@
       }
     }
   }
+}
+
+
+
+// ===============================================================
+// ----------- FAQ -----
+.faq-page {
+		// .faq-page__title
+		&__title {
+      @include adaptiveValue("margin-bottom", 48, 24);
+		}
+		// .faq-page__btn
+		&__btn {
+      width: 100%;
+      height: 60px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.6;
+      @include adaptiveValue("margin-bottom", 32, 24);
+      @media (min-width: 992px) {
+        display: none;
+      }
+      @include mobile {
+        @include adaptiveValue("height", 60, 48);
+      }
+		}
+		// .faq-page__body
+		&__body {
+      display: flex;
+      column-gap: 68px;
+		}
+		// .faq-page__spoller
+		&__spoller {
+      width: 68%;
+      @include netbook {
+        width: 100%;
+      }
+		}
+		// .faq-page__form
+		&__form {
+      // padding-top: 90px;
+      @include netbook {
+        display: none;
+      }
+		}
 }
