@@ -5,6 +5,12 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
+  @include tablet {
+    @include adaptiveValue("font-size", 18, 14);
+  }
+  @include mobile {
+    line-height: 1.6;
+  }
 }
 
 .sub-title_second {
@@ -216,7 +222,7 @@
 	}
 }
 
-// ----------------------------------------
+// --- FORM-CARDS --------------------
 .form-card {
   position: relative;
   background-color: $main;
@@ -381,6 +387,9 @@
     }
   }
 }
+
+// --- TEXT BLOCKS --------------------
+
 
 
 // ===============================================================================
@@ -2225,3 +2234,89 @@
     }
   }
 }
+
+
+
+// ===============================================================
+// ----------- COMPANY -----
+
+.company {
+  // .company__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 104, 24);
+  }
+  // .company__title-wrap
+  &__title-wrap {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+   // .company__sub-title
+  &__sub-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    @include tablet {
+      @include adaptiveValue("margin-bottom", 24, 16);
+    }
+  }
+  // .company__row-block
+  &__row-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    &._first-block {
+      @include adaptiveValue("margin-bottom", 60, 24);
+    }
+    &._second-block {
+      @include adaptiveValue("margin-bottom", 48, 24);
+    }
+    @include netbook {
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+    }
+  }
+  // .company__clmn
+  &__clmn {
+    
+  }
+  // .company__logo-wrap
+  &__logo-wrap {
+    @include netbook {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .universal-logo {
+      @include adaptiveValue("margin-bottom", 48, 24);
+    }
+  }
+  // .company__row-slider
+  &__row-slider {
+    @include adaptiveValue("margin-bottom", 48, 24);
+  }
+  // .company__list
+  &__list {
+  }
+  // .company__li
+  &__li {
+    position: relative;
+    padding-left: 22px;
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+    &::before {
+      content:'';
+      position: absolute;
+      top: 50%;
+      left: 9px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background:#858585;
+    }
+  }
+}
+
+

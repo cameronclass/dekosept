@@ -369,6 +369,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+  if (document.querySelector(".company__slider")) {
+    new Swiper(".company__slider", {
+      slidesPerView: 3,
+      spaceBetween: 48,
+      loop: true,
+      navigation: {
+        nextEl: ".company__slider .swiper-button-next",
+        prevEl: ".company__slider .swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 16,
+        },
+        576: {
+          slidesPerView: 2.5,
+          spaceBetween: 48,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 48,
+        },
+      },
+    });
+  }
+
   if (document.querySelector(".main-card-slider")) {
     new Swiper(".main-card-slider", {
       slidesPerView: 1,
