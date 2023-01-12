@@ -2403,7 +2403,6 @@
 
 
 
-
 // ===============================================================
 // ----------- VACANCY -----
 
@@ -2475,6 +2474,182 @@
     }
     @include mobile {
      width: 100%;
+    }
+  }
+}
+
+
+
+// ===============================================================
+// ----------- CONTACTS -----
+.contacts {
+  // .contacts__head
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  // .contacts__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 24);
+  }
+  // .contacts__subtitle
+  &__subtitle {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 757px;
+    @include adaptiveValue("margin-bottom", 48, 32);
+    @include tablet {
+      @include adaptiveValue("font-size", 16, 10);
+    }
+    @include mobile {
+      font-weight: 400;
+      line-height: 1.6;
+    }
+  }
+  // .contacts__body
+  &__body {
+    display: grid;
+    @include adaptiveValue("gap", 48, 8);
+    grid-template-columns: 1fr 1fr 1fr;
+    @include netbook {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .contacts__item
+  &__item {
+    border: 2px solid #E9E9E9;
+    border-radius: 16px;
+    transition: border .2s linear;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    &._tels-contacts {
+      display: block;
+      .contacts__item_head {
+        margin-bottom: 16px;
+      }
+    }
+    &:hover {
+      border: 2px solid #23236B;
+    }
+    // .contacts__item_sub-one
+    &_sub-one {
+      display: grid;
+      row-gap: 8px;
+      border-bottom: 1px solid #E9E9E9;
+      @include adaptiveValue("padding-bottom", 33, 20);
+    }
+    // .contacts__item_sub-two
+    &_sub-two {
+      display: grid;
+      row-gap: 8px;
+      margin-top: 24px;
+    }
+    // .contacts__item_head
+    &_head {
+      display: flex;
+      gap: 16px;
+      align-items: flex-end;
+    }
+    // .contacts__item_img
+    &_img {
+      width: 48px;
+      height: 48px;
+    }
+    // .contacts__item_type
+    &_type {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.6;
+      @include tablet {
+        @include adaptiveValue("font-size", 16, 14);
+      }
+      @include mobile {
+        font-weight: 500;
+      }
+    }
+    // .contacts__item_text
+    &_text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.6;
+      @include tablet {
+        @include adaptiveValue("font-size", 14, 10);
+      }
+      @include mobile {
+        font-weight: 400;
+      }
+    }
+    // .contacts__item_icon
+    &_icon {
+      width: 24px;
+      height: 24px;
+    }
+    // .contacts__item_text-big
+    &_text-big {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+    // .contacts__item_text-small
+    &_text-small {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 1.4;
+      @include tablet {
+        @include adaptiveValue("font-size", 12, 10);
+      }
+      @include mobile {
+        font-weight: 400;
+        line-height: 1.6;
+      }
+    }
+    // .contacts__item_text-av
+    &_text-av {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.6;
+      @include tablet {
+        @include adaptiveValue("font-size", 14, 12);
+      }
+      @include mobile {
+        font-weight: 600;
+        line-height: 1.4;
+      }
+    }
+  }
+  // .contacts__icons
+  &__icons {
+    display: flex;
+    @include adaptiveValue("column-gap", 24, 20);
+  }
+  // .contacts__form
+  &__form {
+    
+    .form-card {
+      @include mobile {
+        @include adaptiveValue("padding-top", 32, 16);
+        @include adaptiveValue("padding-right", 32, 16);
+        @include adaptiveValue("padding-bottom", 32, 16);
+        @include adaptiveValue("padding-left", 32, 16);
+      }
+      @media (max-width: 650px) {
+        max-width: none;
+      }
+    }
+    .form-card__title {
+      @include mobile {
+        @include adaptiveValue("font-size", 24, 16);
+        line-height: 1.6;
+        font-weight: 700;
+      }
     }
   }
 }
