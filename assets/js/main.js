@@ -421,6 +421,60 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+
+  if (document.querySelector(".card__slider")) {
+    new Swiper(".card__slider", {
+      slidesPerView: 1,
+      spaceBetween: 32,
+      loop: true,
+      navigation: {
+        nextEl: ".card__sliders .swiper-button-next",
+        prevEl: ".card__sliders .swiper-button-prev",
+      },
+      thumbs: {
+        // Свайпер с мениатюрами
+        swiper: {
+          el: '.card__mini-slider',
+          breakpoints: {
+            0: {
+              slidesPerView: 1.2,
+              spaceBetween: 16,
+            },
+            300: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            350: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            392: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+            470: {
+              slidesPerView: 6,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 7,
+              spaceBetween: 20,
+            },
+            993: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+            1100: {
+              slidesPerView: 6,
+              spaceBetween: 20,
+            },
+          },
+        }
+      },
+     
+    });
+  }
+
   if (document.querySelector(".not-found__slider ")) {
     new Swiper(".not-found__slider ", {
       slidesPerView: 3.5,

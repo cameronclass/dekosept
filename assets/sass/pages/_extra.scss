@@ -1199,6 +1199,10 @@
       &.swiper-slide-thumb-active {
         opacity: 1;
       }
+      @include mobile {
+        width: 60px;
+        height: 60px;
+      }
     }
     // .card__mini-slider_image
     &_image {
