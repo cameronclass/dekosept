@@ -2302,7 +2302,7 @@
   }
   // .company__clmn
   &__clmn {
-    
+ 
   }
   // .company__logo-wrap
   &__logo-wrap {
@@ -2321,14 +2321,17 @@
   }
   // .company__list
   &__list {
+   
   }
   // .company__li
   &__li {
     position: relative;
     padding-left: 22px;
+    
     &:not(:last-child) {
       margin-bottom: 3px;
     }
+
     &::before {
       content:'';
       position: absolute;
@@ -2338,6 +2341,16 @@
       height: 3px;
       border-radius: 50%;
       background:#858585;
+    }
+  }
+   // .company__link
+   &__link { 
+    color: black;
+    &._active {
+      color: $cyan;
+    }
+    &:hover {
+      color: $cyan;
     }
   }
 }
@@ -2852,6 +2865,10 @@
   }
   // .news-one__clmn-right
   &__clmn-right {
+    .company__clmn {
+      position: sticky;
+      top: 0px;
+    }
     @include netbook {
       display: none;
     }
