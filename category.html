@@ -35,6 +35,7 @@
 </head>
 
 <body>
+
     <!-- Wrapper -->
     <div class="wrapper">
 
@@ -56,8 +57,12 @@
                 <div class="container">
                     <h2 class="main-title">Декор прудовых фильтров</h2>
 
+
+
                     <div class="page-category__block">
-                        <div class="page-category__filter">
+                        <button class="page-category__filter_open js-filter-open"><img src="assets/img/icons/tune.svg" alt=""></button>
+                        <div class="page-category__filter js-filter-block">
+                            <button type="button" class="page-category__filter_close js-filter-close"><img src="assets/img/icons/close.svg" alt=""></button>
                             <span class="page-category__filter_count">Найдено: 3675 товаров</span>
                             <button type="button" class="main-btn _bordered-black page-category__filter_help">
                                 <img class="main-btn__icon" src="assets/img/icons/chat2.svg" alt="">
@@ -65,8 +70,8 @@
                             </button>
 
                             <!-- Form -->
-                            <form action="#" class="mb-5">
-                                <div class="filter-accardion">
+                            <form action="#" class="page-category__form mb-5">
+                                <div class="filter-accordion">
                                     <div class="ac">
                                         <h2 class="ac-header">
                                             <button type="button" class="ac-trigger">Цена</button>
@@ -260,59 +265,62 @@
                                 </button>
                             </form>
 
-
-
                             <!-- News -->
-                            <h2 class="main-title">Новости и статьи</h2>
-                            <div class="news__card mb-3">
-                                <img class="news__card_img" src="assets/img/news_item.png">
-                                <div class="news__card_content">
-                                    <div class="news__card_date">22.10.2021</div>
-                                    <div class="news__card_title">Cras pulvinar mattis nunc sed blandit libero volutpat</div>
-                                    <div class="news__card_text">Turpis nunc eget lorem dolor sed viverra. Ipsum dolor sit amet consectetur adipiscing.</div>
-                                    <a class="news__card_button" href="#">Читать полностью</a>
+                            <div class="page-category__news">
+                                <h2 class="main-title">Новости и статьи</h2>
+                                <div class="news__card mb-3">
+                                    <img class="news__card_img" src="assets/img/news_item.png">
+                                    <div class="news__card_content">
+                                        <div class="news__card_date">22.10.2021</div>
+                                        <div class="news__card_title">Cras pulvinar mattis nunc sed blandit libero volutpat</div>
+                                        <div class="news__card_text">Turpis nunc eget lorem dolor sed viverra. Ipsum dolor sit amet consectetur adipiscing.</div>
+                                        <a class="news__card_button" href="#">Читать полностью</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="news__card mb-3">
-                                <img class="news__card_img" src="assets/img/news_item.png">
-                                <div class="news__card_content">
-                                    <div class="news__card_date">22.10.2021</div>
-                                    <div class="news__card_title">Cras pulvinar mattis nunc sed blandit libero volutpat</div>
-                                    <div class="news__card_text">Turpis nunc eget lorem dolor sed viverra. Ipsum dolor sit amet consectetur adipiscing.</div>
-                                    <a class="news__card_button" href="#">Читать полностью</a>
+                                <div class="news__card mb-3">
+                                    <img class="news__card_img" src="assets/img/news_item.png">
+                                    <div class="news__card_content">
+                                        <div class="news__card_date">22.10.2021</div>
+                                        <div class="news__card_title">Cras pulvinar mattis nunc sed blandit libero volutpat</div>
+                                        <div class="news__card_text">Turpis nunc eget lorem dolor sed viverra. Ipsum dolor sit amet consectetur adipiscing.</div>
+                                        <a class="news__card_button" href="#">Читать полностью</a>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Termins -->
-                            <h2 class="main-title">Термины</h2>
-                            <div class="termins-accordion">
-                                <div class="ac">
-                                    <h2 class="ac-header">
-                                        <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
-                                    </h2>
-                                    <div class="ac-panel">
-                                        <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="page-category__termins">
+                                <h2 class="main-title">Термины</h2>
+                                <div class="termins-accordion">
+                                    <div class="ac">
+                                        <h2 class="ac-header">
+                                            <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                                        </h2>
+                                        <div class="ac-panel">
+                                            <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="ac">
-                                    <h2 class="ac-header">
-                                        <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
-                                    </h2>
-                                    <div class="ac-panel">
-                                        <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <div class="ac">
+                                        <h2 class="ac-header">
+                                            <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                                        </h2>
+                                        <div class="ac-panel">
+                                            <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="ac">
-                                    <h2 class="ac-header">
-                                        <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
-                                    </h2>
-                                    <div class="ac-panel">
-                                        <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <div class="ac">
+                                        <h2 class="ac-header">
+                                            <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                                        </h2>
+                                        <div class="ac-panel">
+                                            <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         <div class="page-category__cards">
                             <div class="main-category__tags">
@@ -334,9 +342,9 @@
                                 </div>
                                 <div class="page-category__cards_filter_buttons">
                                     <span class="page-category__cards_filter_text">Показывать по</span>
-                                    <button class="main-btn">24</button>
-                                    <button class="main-btn">48</button>
-                                    <button class="main-btn">96</button>
+                                    <button class="main-btn _bordered-grey">24</button>
+                                    <button class="main-btn _bordered-grey _active">48</button>
+                                    <button class="main-btn _bordered-grey">96</button>
                                 </div>
                             </div>
                             <div class="page-category__cards_block">
@@ -659,12 +667,50 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="blog__numbers">
+                                <div class="feedback__numbers">
+                                    <button disabled="" type="button" class="feedback__numbers_btn">
+                                        <img class="feedback__numbers_btn-l" src="assets/img/icons/arrow-2.svg" alt="image">
+                                    </button>
+                                    <ul class="feedback__numbers_li">
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link">1</a>
+                                        </li>
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link">2</a>
+                                        </li>
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link">3</a>
+                                        </li>
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link _active">4</a>
+                                        </li>
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link">5</a>
+                                        </li>
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link">...</a>
+                                        </li>
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link">8</a>
+                                        </li>
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link">9</a>
+                                        </li>
+                                        <li class="feedback__numbers_item">
+                                            <a href="#" class="feedback__numbers_link">10</a>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="feedback__numbers_btn">
+                                        <img class="feedback__numbers_btn-r" src="assets/img/icons/arrow-2.svg" alt="image">
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </section>
-
-
 
             <!-- FAQ -->
             <section class="faq section">

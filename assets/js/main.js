@@ -191,6 +191,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const jsOpenSearch = document.querySelector(".js-open-search");
   const jsSearchBlock = document.querySelector(".js-search-block");
   const mainBlock = document.querySelector(".main");
+  const jsFilterOpen = document.querySelector(".js-filter-open");
+  const jsFilterClose = document.querySelector(".js-filter-close");
+  const jsFilterBlock = document.querySelector(".js-filter-block");
 
   if (headerCatalogBtn) {
     headerCatalogBtn.forEach((item) => {
@@ -216,8 +219,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   if (jsOpenSearch) {
     jsOpenSearch.addEventListener("click", () => {
-      jsSearchBlock.classList.toggle("_active");
+      if (jsSearchBlock) {
+        jsSearchBlock.classList.toggle("_active");
+      }
       mainBlock.classList.toggle("_active");
+    });
+  }
+
+  if (jsFilterOpen) {
+    jsFilterOpen.addEventListener("click", () => {
+      jsFilterBlock.classList.add("_active");
+      mainBlock.classList.add("_active");
+    });
+  }
+
+  if (jsFilterClose) {
+    jsFilterClose.addEventListener("click", () => {
+      jsFilterBlock.classList.remove("_active");
+      mainBlock.classList.remove("_active");
     });
   }
 
@@ -225,7 +244,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     mainBlock.addEventListener("click", () => {
       if (mainBlock.classList.contains("_active")) {
         mainBlock.classList.remove("_active");
-        jsSearchBlock.classList.remove("_active");
+        if (jsSearchBlock) {
+          jsSearchBlock.classList.remove("_active");
+        }
       }
     });
   }
@@ -531,8 +552,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (document.querySelector(".termins-accordion")) {
     new Accordion(".termins-accordion");
   }
-  if (document.querySelector(".filter-accardion")) {
-    new Accordion(".filter-accardion", {
+  if (document.querySelector(".filter-accordion")) {
+    new Accordion(".filter-accordion", {
       showMultiple: true,
     });
   }
