@@ -229,6 +229,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     });
   }
+
   if (document.querySelector(".main-products__tags_slider")) {
     /* Slider */
     new Swiper(".main-products__tags_slider", {
@@ -272,12 +273,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
           slidesPerView: "auto",
           centeredSlides: true,
           grid: {
+            fill: "row",
             rows: 1,
           },
         },
         992: {
           slidesPerView: "auto",
           grid: {
+            fill: "row",
             rows: 1,
           },
         },
@@ -290,17 +293,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
       },
     });
   }
-
-  /*  window.addEventListener("resize", () => {
-    if (window.innerWidth > 1200) {
-      productsSlider.update();
-      productsSlider.updateAutoHeight();
-      productsSlider.updateSize();
-      productsSlider.updateSlides();
-      productsSlider.updateSlidesClasses();
-      productsSlider.extendDefaults(productsSliderOptions);
-    }
-  }); */
 
   if (document.querySelector(".main-products-slider__slider .swiper")) {
     new Swiper(".main-products-slider__slider .swiper", {
@@ -421,7 +413,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
-
   if (document.querySelector(".card__slider")) {
     new Swiper(".card__slider", {
       slidesPerView: 1,
@@ -434,7 +425,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       thumbs: {
         // Свайпер с мениатюрами
         swiper: {
-          el: '.card__mini-slider',
+          el: ".card__mini-slider",
           breakpoints: {
             0: {
               slidesPerView: 1.2,
@@ -469,9 +460,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
               spaceBetween: 20,
             },
           },
-        }
+        },
       },
-     
     });
   }
 
@@ -537,6 +527,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
   if (document.querySelector(".accordion-container-second")) {
     new Accordion(".accordion-container-second");
+  }
+  if (document.querySelector(".termins-accordion")) {
+    new Accordion(".termins-accordion");
+  }
+  if (document.querySelector(".filter-accardion")) {
+    new Accordion(".filter-accardion", {
+      showMultiple: true,
+    });
   }
 
   Fancybox.bind("[data-fancybox]", {});

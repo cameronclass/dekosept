@@ -23,10 +23,10 @@
   <meta name="twitter:description" content="Description Here">
   <meta name="twitter:image" content="https://www.developmentlogics.com/wp-content/uploads/2017/07/4.jpg">
   <!-- Favivon -->
-  <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
-  <link rel="icon" type="image/png" href="assets/img/logo.svg">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico">
   <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" href="assets/img/logo.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.ico">
   <!-- Styles CSS -->
   <link rel="stylesheet" href="assets/css/libs.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -47,14 +47,14 @@
               <span class="header__location_text">Москва</span>
             </div>
             <ul class="header__menu">
-              <li class="header__menu_item"><a class="header__menu_link" href="#">О компании</a></li>
-              <li class="header__menu_item"><a class="header__menu_link" href="#">Оплата</a></li>
-              <li class="header__menu_item"><a class="header__menu_link" href="#">Доставка</a></li>
-              <li class="header__menu_item"><a class="header__menu_link" href="#">Гарантия</a></li>
-              <li class="header__menu_item"><a class="header__menu_link" href="#">Сертификаты</a></li>
-              <li class="header__menu_item"><a class="header__menu_link" href="#">Отзывы</a></li>
-              <li class="header__menu_item"><a class="header__menu_link" href="#">Статьи</a></li>
-              <li class="header__menu_item"><a class="header__menu_link" href="#">Контакты</a></li>
+              <li class="header__menu_item"><a class="header__menu_link" href="company.html">О компании</a></li>
+              <li class="header__menu_item"><a class="header__menu_link" href="payment.html">Оплата</a></li>
+              <li class="header__menu_item"><a class="header__menu_link" href="delivery.html">Доставка</a></li>
+              <li class="header__menu_item"><a class="header__menu_link" href="guarantees.html">Гарантия</a></li>
+              <li class="header__menu_item"><a class="header__menu_link" href="certificates.html">Сертификаты</a></li>
+              <li class="header__menu_item"><a class="header__menu_link" href="feedback.html">Отзывы</a></li>
+              <li class="header__menu_item"><a class="header__menu_link" href="blog.html">Статьи</a></li>
+              <li class="header__menu_item"><a class="header__menu_link" href="contacts.html">Контакты</a></li>
             </ul>
           </div>
           <div class="header__center">
@@ -66,7 +66,7 @@
                   </div>
                 </div>
               </button>
-              <a class="header__logo" href="#">
+              <a class="header__logo" href="index.html">
                 <img src="assets/img/logo.svg" alt="logo">
               </a>
               <div class="header__iconed">
@@ -235,9 +235,15 @@
 
             <div class="header__control">
               <button class="header__control_btn"><img class="header__control_icon" src="assets/img/icons/User.svg" alt="icon" loading="lazy"></button>
-              <button class="header__control_btn"><img class="header__control_icon" src="assets/img/icons/Chart.svg" alt="icon" loading="lazy"></button>
-              <button class="header__control_btn"><img class="header__control_icon" src="assets/img/icons/Heart.svg" alt="icon" loading="lazy"></button>
-              <button class="header__control_btn"><img class="header__control_icon" src="assets/img/icons/Cart.svg" alt="icon" loading="lazy"></button>
+              <a class="header__control_btn" href="comparison.html">
+                <img class="header__control_icon" src="assets/img/icons/Chart.svg" alt="icon" loading="lazy">
+                <span class="header__control_icon_number">5</span>
+              </a>
+              <a class="header__control_btn" href="favorites.html">
+                <img class="header__control_icon" src="assets/img/icons/Heart.svg" alt="icon" loading="lazy">
+                <span class="header__control_icon_number">5</span>
+              </a>
+              <a class="header__control_btn" href="cart.html"><img class="header__control_icon" src="assets/img/icons/Cart.svg" alt="icon" loading="lazy"></a>
             </div>
           </div>
 
@@ -934,6 +940,7 @@
             <a class="header__navigation_item" href="#">
               <img class="header__navigation_icon" src="assets/img/icons/Chart.svg" alt="">
               <span class="header__navigation_text">Сравнить</span>
+              <span class="header__navigation_number">5</span>
             </a>
             <button class="header__navigation_item js-open-search">
               <img class="header__navigation_icon" src="assets/img/icons/Search.svg" alt="">
@@ -942,6 +949,7 @@
             <a class="header__navigation_item" href="#">
               <img class="header__navigation_icon" src="assets/img/icons/Heart.svg" alt="">
               <span class="header__navigation_text">Избранное</span>
+              <span class="header__navigation_number">5</span>
             </a>
             <a class="header__navigation_item" href="#">
               <img class="header__navigation_icon" src="assets/img/icons/Cart.svg" alt="">

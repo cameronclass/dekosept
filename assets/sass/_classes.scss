@@ -356,6 +356,81 @@
     }
 }
 
+.breadcrumbs {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: 10px;
+        color: $black;
+
+        &::after {
+            content: "\203A";
+            margin-left: 10px;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+
+    &__link {
+        color: #888888;
+        font-weight: 400;
+        font-size: 10px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 10px;
+        color: $black;
+    }
+}
+
+.filter-price {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 15px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+
+        &_text {
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        .input {
+            text-align: center;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
 .accordion-container,
 .accordion-container-second {
     width: 100%;

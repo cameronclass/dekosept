@@ -49,6 +49,26 @@ img {
     height: auto;
 }
 
+select {
+    border: 1px solid #888888;
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: #888888;
+    width: 100%;
+    font-weight: 300;
+    font-size: 12px;
+
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 1em;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 input {
     border: 1px solid transparent;
 
@@ -76,30 +96,27 @@ input[type="checkbox"] {
     color: currentColor;
     border: 0.15em solid currentColor;
     border-radius: 0.15em;
-    transform: translateY(-0.075em);
 
     display: grid;
     place-content: center;
+    cursor: pointer;
 }
 
 input[type="checkbox"]::before {
     content: "";
-    /* width: 0.65em;
-    height: 0.65em;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-    transform: scale(0);
-    transform-origin: bottom left;
-    transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(--form-control-color);
-    background-color: CanvasText; */
+    width: 13px;
+    height: 13px;
+    background-color: white;
 }
 
 input[type="checkbox"]:checked {
-    background-color: #fff;
+    background-color: white;
+    border: 1px solid;
 }
 
 input[type="checkbox"]:checked::before {
-    transform: scale(1);
+    transform: scale(0.5);
+    background-color: $main;
 }
 
 input[type="checkbox"]:focus {}
@@ -124,6 +141,10 @@ input[type="checkbox"]:disabled {
     &:focus {
         outline: none;
         border-color: $black;
+    }
+
+    &._white {
+        border: 1px solid #858585;
     }
 }
 

@@ -66,6 +66,17 @@
             color: white;
         }
     }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    &:hover &__icon {
+        filter: invert(1);
+    }
+
 }
 
 .btn-search {

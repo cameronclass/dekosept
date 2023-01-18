@@ -391,16 +391,26 @@
     &__control {
         display: flex;
         align-items: center;
-        column-gap: 10px;
+        column-gap: 20px;
 
         &_icon {
             width: auto;
             height: 20px;
+
+            &_number {
+                position: absolute;
+                right: -10px;
+                top: -2px;
+                font-weight: 600;
+                font-size: 10px;
+            }
         }
 
         &_btn {
             display: flex;
             align-items: center;
+            position: relative;
+            color: $black;
         }
 
         @include netbook {
@@ -598,6 +608,7 @@
         &_item {
             text-align: center;
             width: 20%;
+            position: relative;
         }
 
         &_icon {
@@ -609,6 +620,16 @@
             font-weight: 600;
             font-size: 9px;
             color: $black;
+        }
+
+        &_number {
+            position: absolute;
+            top: 0;
+            left: calc(50% + 20px);
+            transform: translateX(-50%);
+            color: $black;
+            font-size: 12px;
+            font-weight: 600;
         }
     }
 
