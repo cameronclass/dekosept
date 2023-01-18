@@ -15,6 +15,10 @@
         @include netbook {
             max-width: 130px;
         }
+
+        @include mobile {
+            max-width: 100px;
+        }
     }
 
     &__block {
@@ -71,7 +75,7 @@
             }
 
             @include tablet {
-                column-gap: 10px;
+                column-gap: 8px;
             }
         }
 
@@ -81,7 +85,11 @@
             column-gap: 64px;
 
             @include laptop {
-                column-gap: 30px;
+                column-gap: 20px;
+            }
+
+            @include mobile {
+                column-gap: 10px;
             }
 
             &_icon {
@@ -219,6 +227,10 @@
 
             @include tablet {
                 column-gap: 8px;
+            }
+
+            @include mobile {
+                font-size: 10px;
             }
 
             &_icon {
@@ -444,10 +456,12 @@
             position: fixed;
             height: 100vh;
             left: 0;
-            top: 55px;
+            top: 54px;
             box-shadow: none;
             border-radius: 0;
-            padding: 30px;
+            padding: 30px 30px 150px;
+            overflow-y: auto;
+            align-items: flex-start;
         }
 
         &._active {
@@ -561,7 +575,6 @@
                 }
             }
         }
-
 
         &__banner {
             width: 100%;
