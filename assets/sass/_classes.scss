@@ -196,13 +196,21 @@
     padding: 15px;
     border: 1px solid #858585;
     border-radius: 16px;
+    position: relative;
+
+    &:hover {
+        border-color: $main;
+    }
 
     &__top {
         position: relative;
+        z-index: 2;
     }
 
     &__bottom {
         margin-top: 10px;
+        position: relative;
+        z-index: 2;
 
         &_block {
             display: flex;
