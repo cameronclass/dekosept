@@ -448,6 +448,10 @@
         border-radius: 16px;
         padding: 24px;
 
+        &:hover {
+            border-color: $main;
+        }
+
         &_heading {
             display: flex;
             align-items: center;
