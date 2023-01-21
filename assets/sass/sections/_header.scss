@@ -289,7 +289,7 @@
         }
 
         &._active {
-            width: calc(100% - 25px);
+            width: 100%;
             display: flex;
             position: fixed;
             z-index: 11;
