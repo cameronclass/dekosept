@@ -1,0 +1,174 @@
+.footer {
+    background-color: $main;
+    color: white;
+
+    @include netbook {
+        margin-bottom: 50px;
+    }
+
+    a {
+        color: white;
+    }
+
+    &__block {
+        padding: 50px 0;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+
+        @include tablet {
+            justify-content: center;
+
+        }
+    }
+
+    &__logo {
+        display: flex;
+        width: 190px;
+    }
+
+    &__iconded {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        column-gap: 14px;
+        font-weight: 600;
+        font-size: 12px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        filter: invert(1);
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &_item {
+            width: 24px;
+            height: 24px;
+
+            img {
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+            }
+        }
+
+        .main-btn {
+            border-width: 2px;
+
+            @include tablet {
+                width: 100%;
+                min-width: 200px;
+                padding: 15px 20px;
+
+            }
+        }
+
+
+    }
+
+    &__center {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 70px;
+        margin-top: 60px;
+
+        @include laptop {
+            column-gap: 0;
+            justify-content: space-between;
+        }
+    }
+
+    &__menu {
+        max-width: max-content;
+        margin-bottom: 60px;
+
+        @include laptop {
+            width: 20%;
+        }
+
+        @include netbook {
+            max-width: none;
+            width: 33%;
+        }
+
+        @include tablet {
+            width: 48%;
+
+            &:nth-child(4) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                column-gap: 10px;
+            }
+        }
+
+        &_title {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        &_subtitle {
+            font-weight: 300;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        &_list {
+            font-weight: 300;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+        }
+
+        &_text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        &_item {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 300px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__payment {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &_item {
+            width: auto;
+            max-height: 24px;
+        }
+    }
+
+    &__bottom {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}

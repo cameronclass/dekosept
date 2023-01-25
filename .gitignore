@@ -1,26 +1,77 @@
-# Object file
+### Jekyll ###
+_site
+.jekyll-metadata
+*-cache/
+.sass-cache/
+.jekyll-metadata
+
+
+### NPM ###
+/node_modules/
+
+
+### Atom ###
+.ftpconfig
+.sftpconfig
+
+
+### WordPress ###
+wp-config.php
+wp-config-local.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+
+### Apache ###
+.htaccess
+
+
+### Compiled Source ##
+*.com
+*.class
+*.dll
+*.exe
 *.o
-
-# Ada Library Information
-*.ali
+*.so
 
 
-# Created by https://www.toptal.com/developers/gitignore/api/osx
-# Edit at https://www.toptal.com/developers/gitignore?templates=osx
+### Compressed Packages ###
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
 
-### OSX ###
-# General
-.DS_Store
+
+### Logs and Databases ###
+*.log
+*.sql
+*.sqlite
+
+
+### Linux ###
+*~
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+
+### MacOS ###
+*.DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
 Icon
-
-# Thumbnails
 ._*
-
-# Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -28,15 +79,27 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
 
-# Php Storm
-.idea
 
-# End of https://www.toptal.com/developers/gitignore/api/osx
+### Windows ###
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+### Theme ###
+/.git/
+/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store

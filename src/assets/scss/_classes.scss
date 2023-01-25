@@ -1,0 +1,447 @@
+.section {
+    margin-top: 80px;
+}
+
+.main {
+    padding-bottom: 80px;
+
+    &._active {
+        opacity: 0.1;
+    }
+
+    @include tablet {
+        padding-top: 60px;
+    }
+}
+
+.banner-card {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    height: 100%;
+
+    @include tablet {
+        border-radius: 16px;
+    }
+
+    &__block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 36px;
+        height: 100%;
+
+        @include tablet {
+            padding: 15px;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 60px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        @include laptop {
+            font-size: 40px;
+        }
+
+        @include tablet {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 800;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        @include laptop {
+            font-size: 20px;
+        }
+
+        @include tablet {
+            font-size: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 60px;
+        margin-bottom: 70px;
+
+        @include netbook {
+            margin-bottom: 40px;
+        }
+
+        @include laptop {
+            font-size: 40px;
+        }
+
+        @include tablet {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__btn {
+        font-weight: 500;
+        font-size: 14px;
+        padding: 13px 55px;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        @include tablet {
+            height: 210px;
+        }
+    }
+
+    /* Small */
+
+    &-small {
+        position: relative;
+        border-radius: 32px;
+        overflow: hidden;
+        color: $black;
+        background-color: $light;
+        display: flex;
+
+        &__block {
+            padding: 24px 24px 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+
+            @include laptop {
+                padding: 20px 20px 40px;
+            }
+        }
+
+        &__img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 130px;
+            object-fit: contain;
+            object-position: right;
+
+            @include laptop {
+                height: 110px;
+            }
+
+            &_icon {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &__title {
+            font-weight: 800;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+
+            @include laptop {
+                font-size: 20px;
+            }
+        }
+
+        &__subtitle {
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 10px;
+
+            @include laptop {
+                font-size: 10px;
+            }
+        }
+
+        &__price {
+            font-weight: 300;
+            font-size: 24px;
+            margin-bottom: 15px;
+
+            @include laptop {
+                font-size: 20px;
+            }
+        }
+
+        &__btn {
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 13px;
+        }
+    }
+}
+
+.main-card {
+    width: 100%;
+    min-width: 295px;
+    padding: 15px;
+    border: 1px solid #858585;
+    border-radius: 16px;
+    position: relative;
+
+    &:hover {
+        border-color: $main;
+    }
+
+    &__top {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__bottom {
+        margin-top: 10px;
+        position: relative;
+        z-index: 2;
+
+        &_block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        &_hit {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        &_like {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 20px;
+            display: flex;
+            padding: 0;
+
+            &_original {
+                display: flex;
+            }
+
+            &_hover {
+                display: none;
+            }
+
+            &:hover {
+                .main-card__img_like_hover {
+                    display: flex;
+                }
+
+                .main-card__img_like_original {
+                    display: none;
+                }
+            }
+        }
+
+        &_item {
+            height: 170px;
+            object-fit: contain;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        column-gap: 2px;
+    }
+
+    &__available {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+
+        &_icon {
+            width: 10px;
+        }
+    }
+
+    &__code {
+        font-size: 10px;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__info {
+        font-size: 10px;
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        column-gap: 15px;
+        line-height: 1;
+        margin-top: 16px;
+
+        &_old {
+            font-weight: 300;
+            font-size: 16px;
+            text-decoration-line: line-through;
+            color: #858585;
+        }
+
+        &_new {
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+
+    &__buttons {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+
+    }
+
+    &-slider {
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.star {
+    width: 16px;
+    display: flex;
+    filter: invert(98%) sepia(2%) saturate(243%) hue-rotate(192deg) brightness(114%) contrast(86%);
+
+    &._active {
+        filter: invert(22%) sepia(10%) saturate(3728%) hue-rotate(202deg) brightness(89%) contrast(114%);
+    }
+}
+
+.video-card {
+    position: relative;
+    width: 100%;
+
+    &__preview {
+        filter: brightness(0.5);
+        border-radius: 32px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.breadcrumbs {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: 10px;
+        color: $black;
+
+        &::after {
+            content: "\203A";
+            margin-left: 10px;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+
+    &__link {
+        color: #888888;
+        font-weight: 400;
+        font-size: 10px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 10px;
+        color: $black;
+    }
+}
+
+.filter-price {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 15px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+
+        &_text {
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        .input {
+            text-align: center;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.accordion-container,
+.accordion-container-second {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
