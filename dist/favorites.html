@@ -1028,7 +1028,7 @@
                                     </div>
                                     <div class="main-card__buttons active js-addbtn">
                                         <button class="main-btn js-addbtnopen">В корзину</button>
-                                        <button class="main-btn main-card__oneclick _bordered-black">Купить в 1 клик</button>
+                                        <button data-modal-btn="quick" class="main-btn main-card__oneclick _bordered-black btn-open js-modal-open">Купить в 1 клик</button>
                                     </div>
                                     <div class="main-card__add js-addbtnblock">
                                         <div data-quantity class="quantity third-q">
@@ -1091,7 +1091,7 @@
                                     </div>
                                     <div class="main-card__buttons active js-addbtn">
                                         <button class="main-btn js-addbtnopen">В корзину</button>
-                                        <button class="main-btn main-card__oneclick _bordered-black">Купить в 1 клик</button>
+                                        <button data-modal-btn="quick" class="main-btn main-card__oneclick _bordered-black btn-open js-modal-open">Купить в 1 клик</button>
                                     </div>
                                     <div class="main-card__add js-addbtnblock">
                                         <div data-quantity class="quantity third-q">
@@ -1154,7 +1154,7 @@
                                     </div>
                                     <div class="main-card__buttons active js-addbtn">
                                         <button class="main-btn js-addbtnopen">В корзину</button>
-                                        <button class="main-btn main-card__oneclick _bordered-black">Купить в 1 клик</button>
+                                        <button data-modal-btn="quick" class="main-btn main-card__oneclick _bordered-black btn-open js-modal-open">Купить в 1 клик</button>
                                     </div>
                                     <div class="main-card__add js-addbtnblock">
                                         <div data-quantity class="quantity third-q">
@@ -1217,7 +1217,7 @@
                                     </div>
                                     <div class="main-card__buttons active js-addbtn">
                                         <button class="main-btn js-addbtnopen">В корзину</button>
-                                        <button class="main-btn main-card__oneclick _bordered-black">Купить в 1 клик</button>
+                                        <button data-modal-btn="quick" class="main-btn main-card__oneclick _bordered-black btn-open js-modal-open">Купить в 1 клик</button>
                                     </div>
                                     <div class="main-card__add js-addbtnblock">
                                         <div data-quantity class="quantity third-q">
@@ -1280,7 +1280,7 @@
                                     </div>
                                     <div class="main-card__buttons active js-addbtn">
                                         <button class="main-btn js-addbtnopen">В корзину</button>
-                                        <button class="main-btn main-card__oneclick _bordered-black">Купить в 1 клик</button>
+                                        <button data-modal-btn="quick" class="main-btn main-card__oneclick _bordered-black btn-open js-modal-open">Купить в 1 клик</button>
                                     </div>
                                     <div class="main-card__add js-addbtnblock">
                                         <div data-quantity class="quantity third-q">
@@ -1343,7 +1343,7 @@
                                     </div>
                                     <div class="main-card__buttons active js-addbtn">
                                         <button class="main-btn js-addbtnopen">В корзину</button>
-                                        <button class="main-btn main-card__oneclick _bordered-black">Купить в 1 клик</button>
+                                        <button data-modal-btn="quick" class="main-btn main-card__oneclick _bordered-black btn-open js-modal-open">Купить в 1 клик</button>
                                     </div>
                                     <div class="main-card__add js-addbtnblock">
                                         <div data-quantity class="quantity third-q">
@@ -1513,7 +1513,7 @@
                         <button type="submit" class="form-card__btn main-btn _bordered-white">Связаться с нами</button>
                     </div>
                     <label class="form-card__check">
-                        <input type="checkbox" value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
+                        <input type="checkbox" checked value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
                         <span class="form-card__check_label">Я согласен условиями предоставления услуг и обработкой моих персональных данных при нажатии “Отправить”</span>
                     </label>
                 </form>
@@ -1558,7 +1558,7 @@
                         <button type="submit" class="form-card__btn main-btn _bordered-white">Отправить</button>
                     </div>
                     <label class="form-card__check">
-                        <input type="checkbox" value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
+                        <input type="checkbox" checked value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
                         <span class="form-card__check_label">Я согласен условиями предоставления услуг и обработкой моих персональных данных при нажатии “Отправить”</span>
                     </label>
                 </form>
@@ -1587,7 +1587,7 @@
                         <button type="submit" class="form-card__btn main-btn _bordered-white">Отправить</button>
                     </div>
                     <label class="form-card__check">
-                        <input type="checkbox" value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
+                        <input type="checkbox" checked value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
                         <span class="form-card__check_label">Я согласен условиями предоставления услуг и обработкой моих персональных данных при нажатии “Отправить”</span>
                     </label>
                 </form>
@@ -1619,7 +1619,48 @@
                         <button type="submit" class="form-card__btn main-btn _bordered-white">Отправить</button>
                     </div>
                     <label class="form-card__check">
-                        <input type="checkbox" value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
+                        <input type="checkbox" checked value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
+                        <span class="form-card__check_label">Я согласен условиями предоставления услуг и обработкой моих персональных данных при нажатии “Отправить”</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div data-modal-content="quick" class="js-modal-content wrapper-modal">
+        <div class="overlay"></div>
+        <div class="modal-window">
+            <div class="content">
+                <form class="form-card form-card-quick">
+                    <button class="form-card__close btn-close">
+                        <img class="form-card__close-img" src="assets/img/icons/cross.svg" alt="image">
+                    </button>
+                    <h2 class="form-card__title">Купить в 1 клик</h2>
+                    <div class="form-card__text">Заполните форму и мы Вам перезвоним</div>
+                    <!-- One Card -->
+                    <div class="header__search_content_card">
+                        <div class="header__search_content_card_img">
+                            <img class="header__search_content_card_img_item" src="assets/img/search_card_img.png" alt="">
+                        </div>
+                        <div class="header__search_content_card_block">
+                            <a class="header__search_content_card_title" href="#">Декоративный камень на септик ТОПАС 140x130/50</a>
+                            <div class="header__search_content_card_price">
+                                <div class="main-card__price">
+                                    <div class="main-card__price_old">20 000 ₽</div>
+                                    <div class="main-card__price_new">18 000 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-card__inputs">
+                        <input name="name" placeholder="Имя" type="text" class="form-card__input">
+                        <input type="tel" class="form-card__input tel" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                    </div>
+                    <div class="form-card__btns">
+                        <button type="submit" class="form-card__btn main-btn _bordered-white">Купить в 1 клик</button>
+                    </div>
+                    <label class="form-card__check">
+                        <input type="checkbox" checked value="checkedTestim" name="acceptedTestim" class="form-card__check_input">
                         <span class="form-card__check_label">Я согласен условиями предоставления услуг и обработкой моих персональных данных при нажатии “Отправить”</span>
                     </label>
                 </form>

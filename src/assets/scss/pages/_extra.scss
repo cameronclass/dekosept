@@ -499,6 +499,20 @@
       font-size: 8px;
       line-height: 1.25;
       color: white;
+      cursor: pointer;
+    }
+  }
+
+  &-quick {
+    .header__search_content_card {
+      margin-bottom: 20px;
+      column-gap: 12px;
+      border-bottom: 1px solid #EDEDED;
+    }
+
+    .header__search_content_card_title,
+    .main-card__price_new {
+      color: white;
     }
   }
 }

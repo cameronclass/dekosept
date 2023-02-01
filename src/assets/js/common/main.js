@@ -296,13 +296,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
           let overlay = element.querySelector(":scope .overlay");
           let modalClose = element.querySelector(":scope .btn-close");
-          overlay.onclick = () => {
-            element.classList.remove("active");
-          };
 
-          modalClose.onclick = () => {
-            element.classList.remove("active");
-          };
+          if (overlay)
+            overlay.onclick = () => {
+              element.classList.remove("active");
+            };
+          if (modalClose)
+            modalClose.onclick = () => {
+              element.classList.remove("active");
+            };
 
           if (currentBtn == currentModal) {
             element.classList.add("active");

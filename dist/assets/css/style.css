@@ -2928,7 +2928,15 @@ li {
       font-weight: 500;
       font-size: 8px;
       line-height: 1.25;
-      color: white; }
+      color: white;
+      cursor: pointer; }
+  .form-card-quick .header__search_content_card {
+    margin-bottom: 20px;
+    column-gap: 12px;
+    border-bottom: 1px solid #EDEDED; }
+  .form-card-quick .header__search_content_card_title,
+  .form-card-quick .main-card__price_new {
+    color: white; }
 
 .ordering {
   margin-bottom: 93px; }
