@@ -223,6 +223,10 @@
 
         .main-card {
             max-width: 295px;
+
+            @include mobile {
+                max-width: 150px;
+            }
         }
 
     }
@@ -260,6 +264,10 @@
 
         .main-card {
             max-width: 295px;
+
+            @include mobile {
+                max-width: 150px;
+            }
         }
     }
 

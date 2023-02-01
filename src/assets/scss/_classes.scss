@@ -1,5 +1,9 @@
 .section {
     margin-top: 80px;
+
+    @include mobile {
+        margin-top: 40px;
+    }
 }
 
 .main {
@@ -198,6 +202,11 @@
     border-radius: 16px;
     position: relative;
 
+    @include mobile {
+        min-width: 150px;
+        padding: 8px;
+    }
+
     &:hover {
         border-color: $main;
     }
@@ -205,6 +214,12 @@
     &__top {
         position: relative;
         z-index: 2;
+
+        @include mobile {
+            .swiper-pagination {
+                display: none;
+            }
+        }
     }
 
     &__bottom {
@@ -212,10 +227,18 @@
         position: relative;
         z-index: 2;
 
+        @include mobile {
+            margin-top: 0;
+        }
+
         &_block {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @include mobile {
+                justify-content: center;
+            }
         }
     }
 
@@ -259,6 +282,11 @@
             height: 170px;
             object-fit: contain;
             margin-bottom: 30px;
+
+            @include mobile {
+                height: 100px;
+                margin-bottom: 5px;
+            }
         }
     }
 
@@ -277,10 +305,18 @@
         &_icon {
             width: 10px;
         }
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__code {
         font-size: 10px;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__title {
@@ -292,6 +328,11 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @include mobile {
+            font-size: 8px;
+            text-align: center;
+        }
     }
 
     &__info {
@@ -310,26 +351,67 @@
             font-size: 16px;
             text-decoration-line: line-through;
             color: #858585;
+
+            @include mobile {
+                font-size: 10px;
+            }
         }
 
         &_new {
             font-weight: 400;
             font-size: 20px;
+
+            @include mobile {
+                font-size: 14px;
+            }
         }
     }
 
     &__buttons {
         margin-top: 15px;
-        display: flex;
+        display: none;
         align-items: center;
         flex-wrap: wrap;
         gap: 15px;
 
+        &.active {
+            display: flex;
+        }
+
+        .main-btn {
+            @include mobile {
+                font-size: 14px;
+                padding: 14px;
+                width: 100%;
+            }
+        }
     }
 
     &-slider {
         position: relative;
         overflow: hidden;
+    }
+
+    &__add {
+        margin-top: 16px;
+        display: none;
+        justify-content: center;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__oneclick {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__tech {
+        @include mobile {
+            display: none;
+        }
     }
 }
 

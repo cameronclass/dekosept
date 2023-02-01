@@ -181,7 +181,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
   formQuantity();
 
-  /* Header Catalog */
+  /* Selectors */
   const headerCatalogBtn = document.querySelectorAll(".js-open-catalog");
   const jsHeaderCatalog = document.querySelector(".js-header-catalog");
   const jsHeaderSearch = document.querySelector(".js-header-search");
@@ -194,7 +194,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const jsFilterOpen = document.querySelector(".js-filter-open");
   const jsFilterClose = document.querySelector(".js-filter-close");
   const jsFilterBlock = document.querySelector(".js-filter-block");
+  const addMoreBtn = document.querySelectorAll(".js-addbtn");
+  const addMoreBlock = document.querySelectorAll(".js-addbtnblock");
 
+  console.log(addMoreBtn.nextElementSibling);
+
+  if (addMoreBtn) {
+    addMoreBtn.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        if (event.target.classList.contains("js-addbtnopen")) {
+          item.nextElementSibling.classList.add("active");
+          item.classList.remove("active");
+        }
+      });
+    });
+  }
   if (headerCatalogBtn) {
     headerCatalogBtn.forEach((item) => {
       item.addEventListener("click", () => {
