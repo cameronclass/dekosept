@@ -248,6 +248,11 @@
             top: 0;
             left: 0;
             z-index: 2;
+            width: 52px;
+
+            @include mobile {
+                width: 40px;
+            }
         }
 
         &_like {
@@ -422,6 +427,10 @@
 
     &._active {
         filter: invert(22%) sepia(10%) saturate(3728%) hue-rotate(202deg) brightness(89%) contrast(114%);
+    }
+
+    @include mobile {
+        width: 12px;
     }
 }
 

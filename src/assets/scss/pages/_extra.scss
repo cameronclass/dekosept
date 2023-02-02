@@ -70,6 +70,19 @@
     height: 60px;
   }
 
+  &.cart-q {
+    @include mobile {
+      .quantity__button_minus {
+        height: 20px;
+      }
+
+      .quantity__input input {
+        position: relative;
+        top: 12px;
+      }
+    }
+  }
+
   &.second-q {
 
     grid-template-columns: auto auto;
@@ -294,6 +307,7 @@
 
 
   }
+
 }
 
 // --- FORM-CARD --------------------
@@ -670,7 +684,8 @@
         grid-row-start: 2;
         display: flex;
         align-items: center;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 9px;
         padding: 0 8px;
       }
     }
@@ -822,6 +837,7 @@
 
       @include mobile {
         margin-bottom: 16px;
+        column-gap: 10px;
       }
     }
 
@@ -845,6 +861,11 @@
 
       &:nth-child(2) {
         font-weight: 500;
+      }
+
+      @include mobile {
+        padding-bottom: 12px;
+        padding-top: 12px;
       }
     }
 
@@ -946,6 +967,10 @@
 
       &:not(:last-child) {
         margin-bottom: 16px;
+      }
+
+      @include mobile {
+        padding: 16px 8px;
       }
     }
   }
@@ -1259,6 +1284,7 @@
     // .ordering__checked_check
     &_check {
       display: flex;
+      align-items: center;
       column-gap: 8px;
     }
 

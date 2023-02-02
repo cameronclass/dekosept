@@ -158,6 +158,18 @@
             justify-items: stretch;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
+
+            @include mobile {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px 8px;
+            }
+
+            .main-card {
+                width: 100%;
+                max-width: 144px;
+                min-width: inherit;
+            }
         }
 
         &_filter {
