@@ -5031,11 +5031,11 @@ li {
       .page-category__cards_block {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px 8px; } }
-    .page-category__cards_block .main-card {
-      width: 100%;
-      max-width: 144px;
-      min-width: inherit; }
+        gap: 15px 8px; }
+        .page-category__cards_block .main-card {
+          width: 100%;
+          max-width: 144px;
+          min-width: inherit; } }
   .page-category__cards_filter {
     display: flex;
     align-items: center;

@@ -163,13 +163,15 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: 15px 8px;
+
+                .main-card {
+                    width: 100%;
+                    max-width: 144px;
+                    min-width: inherit;
+                }
             }
 
-            .main-card {
-                width: 100%;
-                max-width: 144px;
-                min-width: inherit;
-            }
+
         }
 
         &_filter {
