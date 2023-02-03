@@ -160,15 +160,8 @@
             gap: 20px;
 
             @include mobile {
-                display: flex;
-                flex-wrap: wrap;
+                grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
                 gap: 15px 8px;
-
-                .main-card {
-                    width: 100%;
-                    max-width: 144px;
-                    min-width: inherit;
-                }
             }
 
 

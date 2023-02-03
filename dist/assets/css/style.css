@@ -5029,13 +5029,8 @@ li {
     gap: 20px; }
     @media screen and (max-width: 576px) {
       .page-category__cards_block {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px 8px; }
-        .page-category__cards_block .main-card {
-          width: 100%;
-          max-width: 144px;
-          min-width: inherit; } }
+        grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+        gap: 15px 8px; } }
   .page-category__cards_filter {
     display: flex;
     align-items: center;
